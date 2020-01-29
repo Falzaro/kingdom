@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Asap&display=swap");
+@font-face {
+  font-family: "Arcade";
+  src: url("ARCADECLASSIC.TTF");
+}
+
+/* Global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.bg {
+  background-image: url("img/green\ firewall.png");
+  background-position: bottom left;
+  height: 140vh;
+}
+
+#current {
+  border-bottom: 1.5px solid orange;
+  padding-bottom: 2px;
+}
+
+/*------------ WEBSITE STARTS HERE -------------*/
+
+/* Kingdom Brand */
+.bg span {
+  font-size: 1.7rem !important;
+  font-weight: 700;
+  padding: 0px 0px 0px 10px;
+  font-family: "MedievalSharp", cursive;
+  transform: translateY(3px);
+}
+
+/* Sign In */
+.sign-in {
+  position: relative;
+}
+
+.bg form {
+  transform: translateY(7px);
+}
+
+.fa-sign-in-alt {
+  position: absolute;
+  top: 18px;
+  right: 100px;
+  height: 45px;
+  padding-right: 5px;
+}
+
+/* Modal Sign In*/
+.modal-content {
+  background-color: #3b4652 !important;
+  opacity: 0.95;
+  padding: 0 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.modal_shadow {
+  /* shadow box for jumbotron*/
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
+  transform: translateY(200px);
+}
+
+.modal-content:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.user-img {
+  position: relative;
+  bottom: 18px;
+  max-width: 105px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  height: 42px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  padding-left: 54px;
+  margin-bottom: 28px;
+}
+
+.one::before {
+  font-family: "Font Awesome\ 5 Free";
+  content: "\f007";
+  position: absolute;
+  font-size: 22px;
+  color: #555e60;
+  left: 28px;
+  padding-top: 4px;
+  margin-top: 1px;
+}
+
+.two {
+  position: relative;
+}
+
+.fa-lock {
+  position: absolute;
+  left: 13px;
+  top: 10px;
+  font-size: 22px;
+}
+
+.login {
+  margin: 7px 0;
+}
+
+.forgot {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.forgot:hover {
+  text-decoration: none;
+  color: #2877cc;
+}
+
+/* Jumbotron */
+.jumbotron-default {
+  transform: translateY(220px) !important;
+  background-color: #79b4a4 !important;
+  font-family: "MedievalSharp", cursive !important;
+  height: 22rem;
+  border-radius: 1.1rem;
+}
+
+.jumbotron-default h1.title {
+  font-size: 40px;
+}
+
+.jumbotron-default .btn {
+  margin-top: 4px;
+}
+
+/* Game Modal */
+.modal-default {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-default {
+  position: relative;
+  background-color: #24272e;
+  margin: 12% auto;
+  height: 60%;
+  width: 55%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 1.25rem;
+  animation-name: modalopen;
+  animation-duration: 0.3s;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Overlay Text */
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #ff6d00;
+  font-family: "Arcade", sans-serif;
+  cursor: pointer;
+  animation: overlay-grow 500ms forwards;
+}
+
+/* NOTES: CSS is read from top to bottom*/
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 8em;
+  }
+}
+
+/* Rock Paper Scissors */
+.modal-default #header {
+  font-family: Asap, Sans-Serif;
+  position: absolute;
+  left: 50%;
+  top: -10%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 50%;
+  height: 18%;
+  padding: 5px 10px;
+  background: #c03a2b;
+  border-radius: 0.5rem;
+}
+
+.modal-content-default {
+  font-family: Asap, Sans-serif;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.score-board {
+  margin: 20px auto;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 4px;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+}
+
+.comment {
+  padding-top: 30px;
+}
+
+.comment p {
+  font-size: 1.6rem;
+}
+
+.badge {
+  position: absolute;
+  background: #e2584d;
+  color: white;
+  font-size: 18px !important;
+  padding: 2px 18px;
+}
+
+#user-label {
+  top: 35px;
+  left: -30px;
+}
+
+#computer-label {
+  top: 35px;
+  right: -32px;
+}
+
+#scorepoints {
+  letter-spacing: 1.1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-43%, -50%);
+}
+
+.choices {
+  display: flex;
+  padding: 30px 0;
+}
+
+.choice {
+  margin: 0 30px;
+  width: 100%;
+  padding: 0.4rem;
+  border: 3px solid white;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition-duration: 0.12s;
+}
+
+.choice:hover {
+  background-color: #393c42;
+}
+
+.green-glow {
+  border: 3px solid #4dcc7d;
+  box-shadow: 0 0 10px#31b431;
+}
+
+.red-glow {
+  border: 3px solid #fc121b;
+  box-shadow: 0 0 10px #d01115;
+}
+
+.gray-glow {
+  border: 3px solid #adb8b8;
+  box-shadow: 0 0 10px #878f8f;
+}
+
+#reset {
+  position: absolute;
+  cursor: pointer;
+  bottom: 5px;
+  right: 33px;
+  font-size: 21px;
+  color: #dedede;
+}
+
+#reset:hover {
+  color: #a8aeb8;
+}
+/* Down Arrow Indicator */
+#scroll {
+  /*location of the anchor down indicator*/
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: -300px;
+  left: 920px;
+}
+
+.box {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box span {
+  display: block;
+  border-bottom: 4.5px solid #79b4a4;
+  border-right: 4.5px solid #79b4a4;
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: animate 2.2s infinite;
+}
+
+.box span:nth-child(1) {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  animation-delay: -0.3s;
+  left: -14px;
+  top: -25px;
+}
+
+.box span:nth-child(2) {
+  position: absolute;
+  border-bottom: 4px solid #79b4a4;
+  border-right: 4px solid #79b4a4;
+  width: 30px;
+  height: 30px;
+  animation-delay: -0.2s;
+  top: 5px;
+  left: -11px;
+}
+
+.box span:nth-child(3) {
+  position: absolute;
+  border-bottom: 3.3px solid #79b4a4;
+  border-right: 3.3px solid #79b4a4;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  animation-delay: -0.1s;
+  top: 32px;
+  left: -8.5px;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+}
+
+/* background 2 */
+.bg_2 {
+  height: 120vh;
+  background-color: #0f1e25;
+}
+
+.bg_2 .intro-title {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 65px;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  padding-right: 20px;
+  padding-left: 5px;
+  font-family: "MedievalSharp", cursive;
+}
+
+/* Visual Effect */
+.intro-text {
+  width: 40%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s all ease-in-out; /* can't see anything*/
+}
+
+.castle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s all ease-in-out;
+}
+
+.intro-title h2 {
+  color: #eee;
+  font-size: 65px;
+  padding: 0px 0px 0px 30px;
+  font-family: "MedievalSharp", cursive !important;
+}
+
+.intro-text h2 {
+  font-size: 45px;
+  color: #c03a2b;
+  font-family: "MedievalSharp", cursive !important;
+}
+
+.intro-text p {
+  font-size: 25px;
+  padding: 5px;
+}
+
+/* Scroll Revealed */
+.intro-appear {
+  opacity: 1;
+  transform: translateY(0px);
+  color: white;
+  padding: 30px;
+}
+
+.castle-appear {
+  opacity: 1;
+  transform: translateY(0px);
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+}

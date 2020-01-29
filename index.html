@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Transparent Login Form</title>
+  </head>
+  <body>
+    <div class="bg">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="background-color: #3f5454 !important"
+      >
+        <a class="navbar-brand" href="#">
+          <img src="img/pennant.png" height="40px" />
+          <span class="navbar-brand mb-0 h1" id="kingdom">Kingdom</span>
+        </a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" id="current"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <!-- Sign In -->
+          <ul class="navbar-nav sign-in">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-toggle="modal"
+                data-target="#loginModal"
+                id="login"
+                ><span><i class="fas fa-sign-in-alt fa-sm"></i></span>Sign In</a
+              >
+            </li>
+          </ul>
+
+          <!-- Modal Sign In -->
+          <div class="modal fade" role="dialog" id="loginModal">
+            <div class="modal-dialog modal-dialog-centered text-center">
+              <div class="modal-content">
+                <div class="col-12 user-img">
+                  <img src="img/obi-wan.png" class="user-img" />
+                </div>
+
+                <form class="col-12">
+                  <div class="form-group one">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Username"
+                    />
+                  </div>
+                  <div class="form-group two">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Enter Password"
+                    />
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg login">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                  </button>
+                </form>
+
+                <div class="col-12 forgot">
+                  <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal sign in ends-->
+
+          <!-- Search button -->
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search..."
+            />
+            <button
+              class="btn btn-outline-light my-2 my-sm-0 pt-1"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <!-- Search Button ends-->
+
+      <!-- Jumbotron-->
+      <div class="container">
+        <div
+          class="jumbotron-default modal_shadow d-flex flex-column justify-content-center align-items-center"
+        >
+          <h1 class="display-3 mb-4">
+            Welcome To Kingdom
+          </h1>
+
+          <!-- Game Start Button -->
+          <button type="button" class="btn btn-success btn-lg" id="modalBtn">
+            PLAY FOR FREE
+          </button>
+        </div>
+        <!--jumbotron ends-->
+      </div>
+
+      <div class="box">
+        <a href="#scroll">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- anchor scroll -->
+    <div id="scroll"></div>
+
+    <!-- Background 2-->
+    <div class="bg_2">
+      <div class="intro">
+        <div class="intro-title">
+          <h2>Appear Effect</h2>
+        </div>
+        <div class="intro-content">
+          <div class="intro-text">
+            <h2>Take Amazing Shots</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              explicabo numquam, rerum minima aut in eos mollitia tempora
+              similique at? Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Deserunt temporibus ex aliquam eius.
+            </p>
+          </div>
+          <img
+            src="img/castle.jpg"
+            alt="castle"
+            class="castle img-thumbnail"
+            style="width: 600px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Modal -->
+    <div class="modal-default" id="simpleModal">
+      <div class="modal-content-default">
+        <span class="closeBtn">&times;</span>
+        <div id="header">
+          <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="score-board">
+          <div id="user-label" class="badge">user</div>
+          <div id="computer-label" class="badge">comp</div>
+          <!-- scores -->
+          <div id="scorepoints">
+            <span id="user-score">0</span>:<span id="computer-score">0</span>
+          </div>
+          <!-- scores ends -->
+        </div>
+        <div class="comment">
+          <p>Rock breaks scissors any day.</p>
+        </div>
+        <div class="choices">
+          <div class="choice" id="p">
+            <img src="img/hand.png" alt="hand" />
+          </div>
+          <div class="choice" id="s">
+            <img src="img/scissors.svg" alt="scissors" />
+          </div>
+          <div class="choice" id="r">
+            <img src="img/rock.svg" alt="rock" />
+          </div>
+        </div>
+
+        <p id="action-message" class="result">Make your move!</p>
+
+        <p id="reset">Reset</p>
+      </div>
+      <!-- end of modal content -->
+    </div>
+    <!-- game modal ends-->
+
+    <!-- Game Overlay -->
+    <div class="overlay-text">Start Game</div>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
